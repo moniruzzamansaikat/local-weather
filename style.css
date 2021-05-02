@@ -1,0 +1,150 @@
+:root {
+  --bg-img: url(https://images.pexels.com/photos/125510/pexels-photo-125510.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+body {
+  margin: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #f0f0f0;
+  font-family: "Oswald", sans-serif;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--bg-img);
+  background-size: cover;
+  background-position: contain;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin: 0;
+}
+
+h1 > span {
+  text-decoration: underline wavy;
+  color: tomato;
+  position: relative;
+  cursor: pointer;
+}
+
+h1 > span:hover::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 6px;
+  color: #f0f0f0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+sup {
+  font-size: 14px;
+  margin-left: -4px;
+}
+
+.container {
+  max-width: 400px;
+  margin: 5rem auto;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.46);
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.9);
+  border-radius: 20px;
+}
+
+p {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+p.city_name {
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: rgb(240, 240, 240);
+}
+
+.icon > i {
+  font-size: 4rem;
+}
+
+.icon > i.small {
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+small::before {
+  content: ", ";
+}
+
+small {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.animated {
+  animation: circle 5s infinite linear;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10001;
+  background-color: rgba(0, 0, 0, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading i {
+  font-size: 3rem;
+  animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 552px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+span.info {
+  cursor: pointer;
+  text-decoration: underline wavy;
+  color: #4859f7;
+}
+
+#no-internet {
+  position: absolute;
+  font-size: 14px;
+  top: 54%;
+  font-weight: 300;
+}
+
+.sunrise {
+  font-size: 15px;
+  margin: 0 0 -20px 0;
+  font-weight: 400;
+  color: #b9b9b9;
+}

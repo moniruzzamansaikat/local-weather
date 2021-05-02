@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <title>Local Wetaher App</title>
+</head>
+<body>
+
+  <div class="loading">
+    <i class="fas fa-spinner"></i>
+    <p id="no-internet">Please check your internet connection!</p>
+  </div>
+
+  <h1>What is my <span data-text="Click to see description">weather</span> condition ?<h1>
+
+  <div class="container">
+    <p class="sunrise">Sunrise: <span>5am</span>, sunset: <span>6:59pm</span></p>
+    <p class="city_name"><span class="city_name"></span><span class="country_name"></span></p>
+    <p><span class="weather"><span class="wd"></span></span> <sup>&deg;</sup>  <span class="info" style="cursor: pointer;"></span></p>
+    <p class="status"><span class="status"></span><small class="desc"></small></p>
+
+    <p class="icon">
+      <i class="fas fa-cloud-moon-rain"></i>
+    </p>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
